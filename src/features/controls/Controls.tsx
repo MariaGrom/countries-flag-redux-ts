@@ -5,7 +5,11 @@ import { CustomSelect } from './CustomSelect';
 import { useRegion } from './use-region';
 import { Region } from 'types';
 
-const optionsMap: Record <Region, {value: Region, label: Region}> = {
+type RegionOption = {
+  [RegKey in Region] : {value: RegKey, label: RegKey}
+}
+
+const optionsMap: RegionOption = {
   'Africa': { value: 'Africa', label: 'Africa' },
   'America': { value: 'America', label: 'America' },
   'Asia': { value: 'Asia', label: 'Asia' },
